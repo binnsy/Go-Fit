@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react'
 import './styles.scss'
 import 'bootstrap/dist/css/bootstrap.css'
-import { languages } from './languages'
-import { useUndoableReducer, UNDO, REDO } from 'component/reducers'
+import { exercises } from './languages'
+import { useUndoableReducer, UNDO, REDO } from '../reducers'
 
 // api layer
 const getRandomHello = () => {
-  const randomIndex = (Math.random() * languages.length) | 0
-  return languages[randomIndex]
+  const randomIndex = (Math.random() * exercises.length) | 0
+  return exercises[randomIndex]
 }
 
-const initialState = { language: '', text: '' }
+const initialState = { exercise: '', duration: '' }
 // this is a common pattern for Redux
 const reducer = (state, action) => {
   switch (action.type) {
     case 'reset':
       return { ...state, ...initialState }
     case 'fetch_random_hello':
-      const { language, text } = getRandomHello()
-      return { ...state, language, text }
+      const { exercise, duration } = getRandomHello()
+      return { ...state, exercise, duration }
     default:
       return state
   }
@@ -42,7 +42,7 @@ const HelloButton = () => {
         }}
         className="button border border-white rounded"
       >
-        Hello World
+      Random Exercise
       </button>
       <br />
       <button
@@ -74,9 +74,9 @@ const HelloButton = () => {
 
       <div className="button-output">
         <h4 className="output">
-          {state.language}
+          {state.exercise}
           <br />
-          {state.text}
+          {state.duration}
         </h4>
       </div>
     </div>

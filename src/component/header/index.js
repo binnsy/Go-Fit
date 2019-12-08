@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.scss'
-import * as Logo from 'images/green.png'
+import logo from '../../images/whoop.png'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -8,8 +8,8 @@ const Header = () => {
   return (
 
     <nav className="navbar">
-    <img className="logo" data-test="logoIMG" src={Logo} alt="Logo" />
-    <div className="text">Where sustainability meets technology.</div>
+    <img className="logo" src={logo} alt="Logo" />
+    <div className="text">GO FIT.</div>
 
     <nav className="navbar navbar-expand-lg navbar-dark navbar-inverse" data-test="headerComponent">
 

@@ -1,23 +1,23 @@
-export const languages = [
-  { language: "HTML",
-    text: "Hello World!"
+export const exercises = [
+  { exercise: "Push-Ups",
+    duration: "10"
   },
-  { language: "Python",
-    text: "print 'Hello, world!'"
+  { exercise: "Sit-Ups",
+    duration: "25"
   },
-  { language: "Ruby",
-    text: "puts 'Hello, world!'"
+  { exercise: "Squats",
+    duration: "BW x 25'"
   },
-  { language: "Swift",
-    text: "println('Hello, world!')"
+  { exercise: "Side Lunges",
+    duration: "BW x 10 Each"
   },
-  { language: "jQuery",
-    text: "$('body').append('Hello world!');"
+  { exercise: "Plank",
+    duration: "60 sec, 45 sec, 45 sec"
   },
-  { language: "JavaScript",
-    text: "document.write('Hello, world!');"
+  { exercise: "Lunge",
+    duration: "BW 10 x Each"
   },
-  { language: "CoffeeScript",
-    text: "console.log 'Hello, world!'"
+  { exercise: "Russian Twist",
+    duration: "30 Total"
   }
 ]
