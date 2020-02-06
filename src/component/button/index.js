@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ReactPlayer from 'react-player'
 import './styles.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import { exercises } from './languages'
@@ -10,15 +11,15 @@ const getRandomHello = () => {
   return exercises[randomIndex]
 }
 
-const initialState = { exercise: '', duration: '' }
+const initialState = { exercise: '', duration: '', image: '', video: '' }
 // this is a common pattern for Redux
 const reducer = (state, action) => {
   switch (action.type) {
     case 'reset':
       return { ...state, ...initialState }
     case 'fetch_random_hello':
-      const { exercise, duration } = getRandomHello()
-      return { ...state, exercise, duration }
+      const { exercise, duration, image, video } = getRandomHello()
+      return { ...state, exercise, duration, image, video }
     default:
       return state
   }
@@ -73,11 +74,20 @@ const HelloButton = () => {
       </button>
 
       <div className="button-output">
-        <h4 className="output">
+        <h2 className="output">
           {state.exercise}
+            </h2>
           <br />
+          <h4 className="duration">
           {state.duration}
-        </h4>
+          </h4>
+          <br />
+          <h4 className="image">
+           <img className="image" src={state.image} alt="" />
+          </h4>
+          <div className="video">
+            <ReactPlayer url={state.video} width="750" height="500" style="" playing loop type="video/mp4"/>
+          </div>
       </div>
     </div>
   )

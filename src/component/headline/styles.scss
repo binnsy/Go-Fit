@@ -16,3 +16,40 @@
   font-size: 60px;
   color: white;
 }
+
+.WOD-output {
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  // background-size: cover;
+  background-size: 900px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 11%;
+}
+.WOD {
+
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  word-wrap: normal;
+  // padding: 25px;
+  color: #fff;
+  border-radius: 1px, 50%;
+  line-height: 1;
+  text-decoration: underline;
+}
+.WOD-exercise {
+display: inline-block;
+justify-content: center;
+text-align: center;
+vertical-align: middle;
+font-size: 30px;
+word-wrap: normal;
+padding: 25px;
+color: #fff;
+border-radius: 50%;
+line-height: 2
+}

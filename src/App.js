@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './component/header'
 import HelloButton from './component/button'
-// import Headline from 'component/headline'
+import Headline from './component/headline'
 import './app.scss'
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.css'
@@ -14,6 +14,7 @@ function App(props) {
         <Header />
         <Route path='/' />
         <Route exact path='/hello' component={HelloButton} />
+        <Route exact path='/headline' component={Headline} />
       </div>
     </Router>
   )
